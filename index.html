@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snooker Physics Game | p5.js + Matter.js</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
+
+<body>
+  <!-- Game Mode Selector UI -->
+  <!-- 🎮 Game Control Dropdown -->
+<div id="gameMenuContainer">
+  <select id="gameMenuDropdown">
+    <option disabled selected>🎮 Game Menu</option>
+    <option value="mode">Switch Game Mode</option>
+    <option value="new">New Game</option>
+    <option value="resume">Resume Last Game</option>
+    <option value="history">Game History</option>
+    <option value="controls">Game Controls</option>
+  </select>
+</div>
+
+<!-- ⏱️ Game Info -->
+<div id="lastGameStats"></div>
+<div id="mode-selector" style="display: none;">
+  <label for="gameModeSelect">Game Mode:</label>
+  <select id="gameModeSelect">
+    <option value="solo">Solo</option>
+    <option value="multiplayer">2 Player</option>
+  </select>
+</div>
+
+  <!-- Core Extensions -->
+  <script src="gameRules.js"></script>
+  <script src="gameMode.js"></script>
+
+  <!-- Utility Modules -->
+  <script src="helper.js"></script>
+  <script src="score.js"></script>
+  <script src="timer.js"></script>
+  <script src="sound.js"></script> <!-- MUST contain preloadSounds() -->
+  <script src="collision.js"></script>
+
+  <!-- Game Core -->
+  <script src="cueStick.js"></script>
+  <script src="cushion.js"></script>
+  <script src="ballManager.js"></script>
+
+  <!-- Visual Rendering -->
+  <script src="table.js"></script>
+  <script src="visuals.js"></script>
+  <script src="spinControl.js"></script>
+
+  <!-- Input Controls -->
+  <script src="mouseControls.js"></script>
+  <script src="keyboardControls.js"></script>
+  <script src="replay.js"></script>
+
+  <!-- Main Game File (MUST BE LAST) -->
+  <script src="main.js"></script>
+</body>
+</html>
